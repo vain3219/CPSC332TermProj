@@ -31,5 +31,7 @@ ________________________________________________________________________________
 ### Inserting Values into Tables:
 After logging into the MySQL server, abide by the following template:
   * show columns from <table_name_here>; ( This will display the format of the destination table for proper value insertion )
-  ![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
-  *
+  ![Alt text](/image2.png?raw=true "Optional Title")
+  * insert into <table_name_here> values ('value1', 'value2', ... , 'valueN'); ( Using the above result as a guide )
+  * select * from <table_name_here>; ( To review the addition )
+  ![Alt text](/image.png?raw=true "Optional Title")
