@@ -40,7 +40,7 @@ Create table COURSE(
     TXT_BK varchar(50),
     UNITS  tinyint,
     PREREQ  char(7),
-    DEPT_NUM numeric(4),
+    DEPT_NUM char(4),
 foreign key (PREREQ) references COURSE(CNUM),
 foreign key (DEPT_NUM) references DEPT(DEPT_NUM)
 );
