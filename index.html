@@ -53,6 +53,20 @@ border: 3px solid black;
 </head>
 
 <body>
+<?php 
+	$hostName = "shell.ecs.fullerton.edu";
+	$userName = "cs332t32";
+	$password = "ooC6dein";
+	$dbName = $userName;
+
+	$link = mysql_connect($hostName, $userName, $password)or die("Unable to connect to host $hostName");
+	mysql_select_db($dbName, $link) or die("Unable to select database $dbName");
+
+	$SQL = "show columns from STUDENT";
+	$students = mysql_query($SQL, $link);
+
+	mysql_close($link);
+?>
 
 <h1>Welcome to the University Database</h1>
 
@@ -72,7 +86,7 @@ border: 3px solid black;
 
 <div class="rsltcont">
 <div class="results">
-<p> Results </p>
+<p> <?php echo $students ?> </p>
 </div>
 </div>
 
