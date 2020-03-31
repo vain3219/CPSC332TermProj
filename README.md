@@ -30,8 +30,12 @@ After connecting to the CSUF server:
 _____________________________________________________________________________________________________________________
 ### Inserting Values into Tables:
 After logging into the MySQL server, abide by the following template:
+  * show tables; ( This will display all tables within the cs332t32 database )
+  ![Alt text](/image3.png?raw=true "Show Tables")
   * show columns from <table_name_here>; ( This will display the format of the destination table for proper value insertion )
-  ![Alt text](/image2.png?raw=true "Optional Title")
+  ![Alt text](/image2.png?raw=true "Show Database")
   * insert into <table_name_here> values ('value1', 'value2', ... , 'valueN'); ( Using the above result as a guide )
   * select * from <table_name_here>; ( To review the addition )
-  ![Alt text](/image.png?raw=true "Optional Title")
+  ![Alt text](/image.png?raw=true "Insert Values")
+
+  **NOTE: All table names and attributes are in all caps.  SQL statements are case sensitive when refering to table names and attributes.**
