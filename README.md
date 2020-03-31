@@ -38,4 +38,4 @@ After logging into the MySQL server, abide by the following template:
   * select * from <table_name_here>; ( To review the addition )
   ![Alt text](/image.png?raw=true "Insert Values")
 
-  **NOTE: All table names and attributes are in all caps.  SQL statements are case sensitive when refering to table names and attributes.**
+  **NOTE: Table names and attributes are in all caps.  SQL statements are case sensitive when refering to table names and attributes.**
