@@ -1,0 +1,74 @@
+create table PROF( 
+    SSN numeric(9) primary key,
+    FNAME varchar(20),
+    LNAME varchar(20),
+    SEX enum('M','F'),
+    SALARY numeric(6),
+    STADDR varchar(20),
+    CITY varchar(20),
+    STATE varchar(2),
+    ZIP numeric(5),
+    AREA_CODE numeric(3),
+    TELE_NUM numeric(7)
+);
+
+Create table DEPT( 
+    DEPT_NUM char(4) primary key,
+    DEPT_NAME varchar(30),
+    TELE_NUM numeric(10), 
+    OFFLOC varchar(54),
+    CHAIR numeric(9),
+foreign key (CHAIR) references PROF(SSN)
+);
+
+create table STUDENT( 
+    CWID numeric(9) primary key,
+    FNAME varchar(20),
+    LNAME varchar(20),
+    STADDR varchar(20),
+    CITY varchar(20),
+    STATE varchar(2),
+    ZIP numeric(5),
+    TELEPHONE numeric(10),
+    MAJOR char(4),
+foreign key (MAJOR) references DEPT(DEPT_NUM)
+);
+
+Create table COURSE( 
+    CNUM char(7) primary key,
+    TITLE varchar(20),
+    TXT_BK varchar(50),
+    UNITS  tinyint,
+    PREREQ  char(7),
+    DEPT_NUM numeric(4),
+foreign key (PREREQ) references COURSE(CNUM),
+foreign key (DEPT_NUM) references DEPT(DEPT_NUM)
+);
+
+Create table SECTION( 
+    SEC_ID numeric(9) primary key,
+    RM_NUM char(6),
+    SEATS numeric(2),
+    DAYS enum('M','T','W','Th','F','Sat','Sun'),
+    START datetime,
+    END datetime,
+    CNUM char(7),
+    INSTRUCTOR numeric(9),
+foreign key (CNUM) references COURSE(CNUM),
+foreign key (INSTRUCTOR) references PROF(SSN)
+);
+   
+Create table MINOR( 
+    CWID numeric(9) primary key,
+    DEPT_NUM char(4),
+foreign key (CWID) references STUDENT(CWID),
+foreign key (DEPT_NUM) references DEPT(DEPT_NUM)
+); 
+
+Create table ENROLL( 
+    CWID numeric(9) primary key,
+    SEC_ID numeric(9),
+    GRADE enum('A','A-','B+','B','B-','C+','C','C-','D+','D','D-','F'),
+foreign key (CWID) references STUDENT(CWID),
+foreign key (SEC_ID) references SECTION(SEC_ID)
+);
