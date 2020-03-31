@@ -62,9 +62,9 @@ border: 3px solid black;
 	$link = mysql_connect($hostName, $userName, $password)or die("Unable to connect to host $hostName");
 	mysql_select_db($dbName, $link) or die("Unable to select database $dbName");
 
-	$SQL = "show columns from STUDENT";
-	$students = mysql_query($SQL, $link);
-
+	$SQL = "SELECT * FROM PROF";
+	$result = mysql_query($SQL, $link);
+        $row = mysql_fetch_array($result);
 	mysql_close($link);
 ?>
 
@@ -86,7 +86,7 @@ border: 3px solid black;
 
 <div class="rsltcont">
 <div class="results">
-<p> <?php echo $students ?> </p>
+<p> <?php echo $row['FNAME']; ?> </p>
 </div>
 </div>
 
