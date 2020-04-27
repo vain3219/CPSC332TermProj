@@ -80,15 +80,15 @@ border: 3px solid black;
 
 	$conn = new mysqli($hostName, $userName, $password, $dbName);
 
-	if($conn->connect_error() ) {
+	if($conn->connect_error) {
        		die("Connection failed: " . $conn->connect_error);
 	}
 	
-	$query = "SELECT * FROM PROF;"
+	$query = "SELECT * FROM PROF";
 	$result = $conn->query($query);
 
 	if($result->num_rows > 0) {
-       		while($row = $result->fect_assoc() ) {
+       		while($row = $result->fetch_assoc() ) {
                		echo $row['FNAME'] . " " . $row['LNAME'];
        		}
 	} else {
