@@ -89,7 +89,7 @@ border: 3px solid black;
 
 	if($result->num_rows > 0) {
        		while($row = $result->fetch_assoc() ) {
-               		echo $row['FNAME'] . " " . $row['LNAME'];
+               		echo $row['FNAME'] . " " . $row['LNAME'] . "<br>";
        		}
 	} else {
 		echo "0 results";
