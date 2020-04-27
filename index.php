@@ -86,10 +86,7 @@ border: 3px solid black;
 
 <div class="rsltcont">
 <div class="results">
-<p> <?php
-        while( $row = result->fetch_assoc() ) {
-                echo $row['FNAME']; ?> </p>
-        }
+<p> <?php echo $row['FNAME']; ?> </p>
 </div>
 </div>
 
