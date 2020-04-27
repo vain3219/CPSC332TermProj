@@ -53,19 +53,37 @@ border: 3px solid black;
 </head>
 
 <body>
+<<<<<<< HEAD
+=======
+<?php
+        $hostName = "localhost";
+        $userName = "cs332t32";
+        $password = "ooC6dein";
+        $dbName = $userName;
+	
+        $link = mysql_connect($hostName, $userName, $password)or die("Unable to connect to host $hostName");
+        mysql_select_db($dbName, $link) or die("Unable to select database $dbName");
+
+        $SQL = "SELECT * FROM PROF";
+        $result = mysql_query($SQL, $link);
+        $row = mysql_fetch_array($result);
+        mysql_close($link);
+?>
+
+>>>>>>> 6c1e3c3c56022dea319ab8ae1146bd7ab3f74483
 <h1>Welcome to the University Database</h1>
 
 <div class="buttons">
 <div class="prof">
 <h2>Professor Queries</h2>
-<button type="button" onclick="alert('Query #1')">Query #1</button> 
-<button type="button" onclick="alert('Query #2')">Query #2</button> 
+<button type="button" onclick="alert('Query #1')">Query #1</button>
+<button type="button" onclick="alert('Query #2')">Query #2</button>
 </div>
 
 <div class="student">
 <h2>Student Queries</h2>
-<button type="button" onclick="alert('Query #3')">Query #3</button> 
-<button type="button" onclick="alert('Query #4')">Query #4</button> 
+<button type="button" onclick="alert('Query #3')">Query #3</button>
+<button type="button" onclick="alert('Query #4')">Query #4</button>
 </div>
 </div>
 
@@ -101,4 +119,4 @@ $conn->close();
 </div>
 
 </body>
-</html> 
+</html>
