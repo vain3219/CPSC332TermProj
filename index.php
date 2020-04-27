@@ -53,24 +53,6 @@ border: 3px solid black;
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
-<?php
-        $hostName = "localhost";
-        $userName = "cs332t32";
-        $password = "ooC6dein";
-        $dbName = $userName;
-	
-        $link = mysql_connect($hostName, $userName, $password)or die("Unable to connect to host $hostName");
-        mysql_select_db($dbName, $link) or die("Unable to select database $dbName");
-
-        $SQL = "SELECT * FROM PROF";
-        $result = mysql_query($SQL, $link);
-        $row = mysql_fetch_array($result);
-        mysql_close($link);
-?>
-
->>>>>>> 6c1e3c3c56022dea319ab8ae1146bd7ab3f74483
 <h1>Welcome to the University Database</h1>
 
 <div class="buttons">
@@ -96,24 +78,24 @@ border: 3px solid black;
         $password = "ooC6dein";
         $dbName = $userName;
 
-$conn = new mysqli($hostName, $userName, $password, $dbName);
+	$conn = new mysqli($hostName, $userName, $password, $dbName);
 
-if($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
-
-$query = "SELECT * FROM PROF";
-$result = $conn->query($query);
-
-if($result->num_rows > 0) {
-	while($row = $result->fetch_assoc() ) {
-		echo $row['FNAME'] . " " . $row['LNAME'] . "<br>";
+	if($conn->connect_error() ) {
+       		die("Connection failed: " . $conn->connect_error);
 	}
-} else {
-	echo "0 results";
-}
-$conn->close(); 
-?> 
+	
+	$query = "SELECT * FROM PROF;"
+	$result = $conn->query($query);
+
+	if($result->num_rows > 0) {
+       		while($row = $result->fect_assoc() ) {
+               		echo $row['FNAME'] . " " . $row['LNAME'];
+       		}
+	} else {
+		echo "0 results";
+	}
+	$conn->close();
+?>
 </p>
 </div>
 </div>
