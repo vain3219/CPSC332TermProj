@@ -29,6 +29,9 @@ After connecting to the CSUF server:
   
 _____________________________________________________________________________________________________________________
 ### Inserting Values into Tables:
+
+  **IMPORTANT: When inserting values into a table that has a foreign key that references another table: The respective foreign key must ALREADY EXIST in the table that's being referenced.  This means, for example, that an SSN must exist in the PROF table before trying to add a professor to the COURSE table which references the PROF table.**
+
 After logging into the MySQL server, abide by the following template:
   * show tables; ( This will display all tables within the cs332t32 database )
   ![Alt text](/image3.png?raw=true "Show Tables")
