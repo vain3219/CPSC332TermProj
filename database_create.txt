@@ -66,7 +66,7 @@ foreign key (DEPT_NUM) references DEPT(DEPT_NUM)
 ); 
 
 Create table ENROLL( 
-    CWID numeric(9) primary key,
+    CWID numeric(9),
     SEC_ID numeric(9),
     GRADE enum('A','A-','B+','B','B-','C+','C','C-','D+','D','D-','F'),
 foreign key (CWID) references STUDENT(CWID),
