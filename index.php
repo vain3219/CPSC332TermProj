@@ -11,40 +11,10 @@ text-align:center;
 background-color:grey;
 }
 
-div.buttons {
-position:sticky;
-background-color:lightblue;
-Height:110px;
-Width:60%;
-left:20%;
-text-align:center;
-border: 3px solid black;
-}
-
-div.prof {
-background-color:lightblue;
-width:50%;
-Float:left;
-display:inline-block;
-}
-
-div.student {
-background-color:lightblue;
-width:50%;
-float:left;
-display:inline-block;
-}
-
-div.rsltcont {
-text-align:center;
-position:relative;
-top:30px;
-}
-
 div.results {
 background-color:white;
 width:100%;
-height:700px;
+height:300px;
 border: 3px solid black;
 }
 </style>
@@ -55,50 +25,49 @@ border: 3px solid black;
 <body>
 <h1>Welcome to the University Database</h1>
 
-<div class="buttons">
-<div class="prof">
-<h2>Professor Queries</h2>
-<button type="button" onclick="alert('Query #1')">Query #1</button>
-<button type="button" onclick="alert('Query #2')">Query #2</button>
-</div>
-
-<div class="student">
-<h2>Student Queries</h2>
-<button type="button" onclick="alert('Query #3')">Query #3</button>
-<button type="button" onclick="alert('Query #4')">Query #4</button>
-</div>
-</div>
-
-<div class="rsltcont">
-<div class="results">
-<p> 
 <?php
-        $hostName = "localhost";
-        $userName = "cs332t32";
-        $password = "ooC6dein";
-        $dbName = $userName;
+function query1() {
+    $hostName = "localhost";
+    $userName = "cs332t32";
+    $password = "ooC6dein";
+    $dbName = $userName;
 
-	$conn = new mysqli($hostName, $userName, $password, $dbName);
+    if($conn->connect_error) {
+               die("Connection failed: " . $conn->connect_error);
+    }
 
-	if($conn->connect_error) {
-       		die("Connection failed: " . $conn->connect_error);
-	}
-	
-	$query = "SELECT * FROM PROF";
-	$result = $conn->query($query);
+    $query = "select c.TITLE, s.CNUM, s.DAYS, s.START, s.END from PROF p, COURSE c, SECTION s where p.SSN = '274728374' and p.SSN = s.INSTRUCTOR and s.CNUM = c.CNUM;";
+    $result = $conn->query($query);
 
-	if($result->num_rows > 0) {
-       		while($row = $result->fetch_assoc() ) {
-               		echo $row['FNAME'] . " " . $row['LNAME'] . "<br>";
-       		}
-	} else {
-		echo "0 results";
-	}
-	$conn->close();
-?>
-</p>
-</div>
-</div>
+    if($result->num_rows > 0) {
+        echo '<div class="rsltcont">';
+        echo '<div class="results">';
+        echo '<p>';
+               while($row = $result->fetch_assoc() ) {
+                       echo $row['TITLE'] . " " . $row['CNUM'] . " " . $row['DAYS'] . " " . $row['START'] . " " . $row['END'] . "<br>";
+               }
+        echo '</p>';
+        echo '</div>';
+        echo '</div>';
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
 
+// display results on webpage
+}
+?>  
+<button type="button" onclick=query1()>Query #1</button>
+   <div class="results">
+   </div>
+<button type="button" onclick=query2()>Query #2</button>
+   <div class="results">
+   </div>
+<button type="button" onclick=query3() >Query #3</button>
+   <div class="results">
+   </div>
+<button type="button" onclick=query4()>Query #4</button>
+   <div class="results">
+   </div>
 </body>
 </html>
