@@ -14,8 +14,8 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________
 ### Connecting to the CSUF server:
-In an UNIX console type the following:
-  * cs332t32@shell.ecs.fullerton.edu
+In a terminal type the following:
+  * ssh cs332t32@shell.ecs.fullerton.edu
   * Enter the password for user 'cs332t32' ( consult me for the password )
 
 ______________________________________________________________________________________________________________________
