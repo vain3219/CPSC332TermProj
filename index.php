@@ -12,7 +12,7 @@
          }
          div.rect {
          text-align:center;
-         background-color: "white";
+         background-color: white;
          height: 100px;
          width: 175px;
          }
