@@ -18,7 +18,7 @@ $sql = "select c.TITLE, s.CNUM, s.DAYS, s.START, s.END from PROF p, COURSE c, SE
 $result = $conn->query($sql);
 
 echo "Query: $sql";    
-<br>       
+echo "<br>";       
     
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
