@@ -11,12 +11,6 @@ text-align:center;
 background-color:grey;
 }
 
-div.results {
-background-color:white;
-width:100%;
-height:300px;
-border: 3px solid black;
-}
 </style>
 
 <title>University Database</title>
