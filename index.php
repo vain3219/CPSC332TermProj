@@ -35,6 +35,8 @@ Query #1
 Enter Professors SSN:
 <br>
 <input type="text" name="ssn">
+<br>
+<input type="submit">
 <br><br>
 
 </div>
@@ -54,6 +56,8 @@ Enter Course Number:
 Enter Section Number:
 <br>
 <input type="text" name="snum">
+<br>
+<input type="submit">
 <br><br>
 
 </div>
@@ -69,6 +73,8 @@ Query #3
 Enter Course Number:
 <br>
 <input type="text" name="cnum">
+<br>
+<input type="submit">
 <br><br>
 
 </div>
@@ -84,6 +90,8 @@ Query #4
 Enter Campus ID:
 <br>
 <input type="text" name="CWID">
+<br>
+<input type="submit">
 <br><br>
 
 </div>
