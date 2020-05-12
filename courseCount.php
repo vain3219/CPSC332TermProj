@@ -19,7 +19,7 @@ $sql = "select e.GRADE, COUNT(GRADE) as 'NumberOf' from ENROLL e, COURSE c  wher
 $result = $conn->query($sql);
 
 echo "Query: $sql";    
-<br>    
+echo "<br>";     
     
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
