@@ -16,8 +16,8 @@ if($conn->connect_error) {
 }
 
 $sql = "select e.GRADE, COUNT(GRADE) as 'NumberOf'
-        from enroll e
-        where e.cnum = $CNUM and e.sec_id = $SNUM
+        from ENROLL e
+        where e.CNUM = $CNUM and e.SEC_ID = $SNUM
         group by GRADE";
 $result = $conn->query($sql);
 
