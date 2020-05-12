@@ -31,8 +31,8 @@ if($result->num_rows > 0) { ?>
     <tbody>
     <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
-        <td> <?php echo $row["GRADE"]; ?> </td>
-        <td><?php echo "\t"; ?></td>
+        <td><br> <?php echo $row["GRADE"]; ?> </td>
+        <td><?php echo "\t\t\t"; ?></td>
         <td><?php echo $row["NumberOf"]; ?></td>
         <td><?php echo "<br>"; ?></td>
     <?php } ?>
