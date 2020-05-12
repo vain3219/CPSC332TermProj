@@ -7,7 +7,8 @@ text-align:center;
 }
 
 body {
- background-image: url("bikinibottom.gif");
+ text-align:center;
+ background-image: url("bikinibottom.jpg");
  background-color: #cccccc;
 }
 
