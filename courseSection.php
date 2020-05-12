@@ -21,8 +21,9 @@ $sql = "select s.SEC_ID, s.DAYS, s.START, s.END, COUNT(e.CWID)
         group by e.SEC_ID";
 $result = $conn->query($sql);
 
-echo "Query: $sql";    
-echo "<br>";   
+echo "Query: $sql";   
+echo "<br>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+echo "<br><br><br>";    
     
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
