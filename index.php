@@ -43,6 +43,7 @@
       <form action="courseCount.php" method="POST">
          <div style="background-color: none;">
             <br>
+            <div class="rect">
             Query #2
             <br>
             Enter Course Number:
@@ -54,6 +55,7 @@
             <input type="text" name="snum">
             <br>
             <input type="submit" value="Submit">
+            </div>
             <br><br>
          </div>
       </form>
@@ -61,6 +63,7 @@
       <form action="courseSection.php" method="POST">
          <div style="background-color:none;">
             <br>
+            <div class="rect">
             Query #3
             <br>
             Enter Course Number:
@@ -68,6 +71,7 @@
             <input type="text" name="cnum">
             <br>
             <input type="submit" value="Submit">
+            </div>
             <br><br>
          </div>
       </form>
@@ -75,6 +79,7 @@
       <form action="courseCWID.php" method="POST">
          <div style="background-color:none;">
             <br>
+            <div class="rect">
             Query #4
             <br>
             Enter Campus ID:
@@ -82,6 +87,7 @@
             <input type="text" name="CWID">
             <br>
             <input type="submit" value="Submit">
+            </div>
             <br><br>
          </div>
       </form>
