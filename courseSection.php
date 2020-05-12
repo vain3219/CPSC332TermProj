@@ -28,15 +28,15 @@ echo "<br><br><br>";
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div>";
-        echo $row["SEC_ID"];
+        echo "Section ID: " . $row["SEC_ID"];
         echo "</div>";
         
         echo "<div>";
-        echo $row["RM_NUM"];
+        echo "Room Number: " . $row["RM_NUM"];
         echo "</div>";
         
         echo "<div>";
-        echo $row["DAYS"];
+        echo "Days: " . $row["DAYS"];
         echo "</div>";
         
         echo "<div>";
@@ -44,7 +44,7 @@ if($result->num_rows > 0) {
         echo "</div>";
         
         echo "<div>";
-        echo $row["COUNT"];
+        echo "Count: " . $row["COUNT"];
         echo "</div>";
         echo "<br>";
     }
