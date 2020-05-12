@@ -32,7 +32,7 @@ if($result->num_rows > 0) { ?>
     <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
         <td><br> <?php echo $row["GRADE"]; ?> </td>
-        <td><?php echo "\t\t\t"; ?></td>
+        <td><?php echo "\t"; ?></td>
         <td><?php echo $row["NumberOf"]; ?></td>
         <td><?php echo "<br>"; ?></td>
     <?php } ?>
