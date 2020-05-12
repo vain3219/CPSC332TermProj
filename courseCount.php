@@ -15,7 +15,7 @@ if($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select e.GRADE, COUNT(GRADE) as 'NumberOf' from ENROLL e, COURSE c  where c.CNUM = $CNUM and e.SEC_ID = $SNUM group by GRADE";
+$sql = "select e.GRADE, COUNT(GRADE) as 'NumberOf' from ENROLL e, COURSE c  where c.CNUM = '$CNUM' and e.SEC_ID = $SNUM group by GRADE";
 $result = $conn->query($sql);
 
 echo "Query: $sql";    
