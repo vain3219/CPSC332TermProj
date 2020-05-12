@@ -11,16 +11,9 @@ body {
  background-image: url("bikinibottom.jpg");
  background-color: none;
 }
- 
- header {
-    padding: 60px;
-    background-image: url("bikinibottom.jpg");
- }
 
 </style>
-
- <div class="header">
- </div>
+ 
 <title>Bikini Bottom University Database</title>
 </head>
 
