@@ -59,7 +59,7 @@ Enter Section Number:
 
 <h2>Student Queries:</h2>
 
-<form action="query3.php" method="POST">
+<form action="courseSection.php" method="POST">
 <div style="background-color:white;">
 <br>
 Query #3
