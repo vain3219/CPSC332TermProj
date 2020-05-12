@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<body>
     
 <?php
  echo "hello";
@@ -32,4 +33,5 @@ else {
 
 $conn->close();
 ?>
+</body>
 </html>
