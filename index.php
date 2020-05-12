@@ -21,7 +21,7 @@ background-color:grey;
 
 <h2>Professor Queries:</h2>
 
-<form action="query1.php" method:"POST">
+<form action="professorSSN.php" method:"POST">
 <div style="background-color:white;">
 <br>
 Query #1
