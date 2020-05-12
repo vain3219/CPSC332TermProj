@@ -22,14 +22,23 @@ $result = $conn->query($sql);
 echo "Query: $sql";    
 echo "<br>"; 
     
-if($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo $row["SEC_ID"];
-        echo "\t";
-        echo $row["GRADE"];
-        echo "<br>";
-    }
-}
+if($result->num_rows > 0) { ?>
+    <thead>
+        <tr>
+            <th scope="col">Section Id</th>
+            <th scope="col">Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php while($row = $result->fetch_assoc()) { ?>
+        <tr>
+            <td><?php echo $row["SEC_ID"]; ?> </td>
+            <td><?php echo "\t"; ?></td>
+            <td><span style="margin-left: 5em"><?php echo $row["GRADE"]; ?></span></td>
+            <td><?php echo "<br>"; ?></td>
+    <?php } ?>
+    </tbody>
+<?php }
 else {
     echo "0 results";
 }
