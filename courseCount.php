@@ -28,6 +28,7 @@ if($result->num_rows > 0) { ?>
             <th scope="col">Count </th>
         </tr>
     </thead>
+    <tbody>
     <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
         <td> <?php echo $row["GRADE"]; ?> </td>
@@ -35,7 +36,7 @@ if($result->num_rows > 0) { ?>
         <td><?php echo $row["NumberOf"]; ?></td>
         <td><?php echo "<br>"; ?></td>
     <?php } ?>
-
+    </tbody>
 <?php }
 else {
     echo "0 results";
