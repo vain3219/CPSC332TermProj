@@ -7,8 +7,8 @@ text-align:center;
 }
 
 body {
-text-align:center;
-background-color:grey;
+ background-image: url("bikinibottom.gif");
+ background-color: #cccccc;
 }
 
 </style>
