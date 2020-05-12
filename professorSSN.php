@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-    Hello World! your ssn is: <?php echo $_POST["ssn"]; ?>
-<?php /*
-$SSN = $_POST["ssn"]
+<?php 
+$SSN = $_POST["ssn"];
 $hostName = "localhost";
 $userName = "cs332t32";
 $password = "ooC6dein";
@@ -30,7 +29,7 @@ else {
     echo "0 results";
 }
 
-$conn->close(); */
+$conn->close(); 
 ?>
 </body>
 </html>
