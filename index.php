@@ -40,7 +40,7 @@ Enter Professors SSN:
 <br><br>
 
 <form action="courseCount.php" method="POST">
-<div style="background-color:white;opacity: 0.75;">
+<div style="background-color: none;opacity: 0.75;">
 <br>
 Query #2
 <br>
