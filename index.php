@@ -11,9 +11,16 @@ body {
  background-image: url("bikinibottom.jpg");
  background-color: none;
 }
+ 
+div.rect {
+ text-align:center;
+ background-color: "white";
+ height: 100px;
+ width: 175px;
+ }
 
 </style>
- 
+
 <title>Bikini Bottom University Database</title>
 </head>
 
@@ -25,6 +32,7 @@ body {
 <form action="professorSSN.php" method="POST">
 <div style="background-color:none;">
 <br>
+<div class="rect">
 Query #1
 <br>
 Enter Professors SSN:
@@ -32,6 +40,7 @@ Enter Professors SSN:
 <input type="text" name="ssn">
 <br>
 <input type="submit" value="Submit">
+</div>
 <br><br>
 
 </div>
