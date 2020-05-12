@@ -14,10 +14,10 @@ if($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select c.SEC_ID, c.DAYS, c.START, c.END, COUNT(e.CWID)
-        from COURSE c
+$sql = "select s.SEC_ID, s.DAYS, s.START, s.END, COUNT(e.CWID)
+        from SECTION s
         join ENROLL e
-        on e.CNUM = c.CNUM and c.CNUM = '$CNUM'
+        on e.CNUM = s.CNUM and s.CNUM = '$CNUM'
         group by e.CNUM";
 $result = $conn->query($sql);
 
