@@ -14,7 +14,7 @@ if($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select s.SEC_ID, s.DAYS, s.START, s.END, COUNT(e.CWID)
+$sql = "select s.SEC_ID, s.DAYS, s.START, s.END, COUNT(e.CWID), s.RM_NUM
         from SECTION s
         join ENROLL e
         on e.SEC_ID = s.SEC_ID and s.CNUM = '$CNUM'
