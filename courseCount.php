@@ -4,6 +4,8 @@
 <?php 
 $CNUM = $_POST["cnum"];
 $SNUM = $_POST["snum"];
+ echo $CNUM;
+ echo $SNUM;
 $hostName = "localhost";
 $userName = "cs332t32";
 $password = "ooC6dein";
