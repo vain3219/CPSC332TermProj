@@ -22,13 +22,21 @@ echo "<br>";
     
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
+        echo "<div>";
         echo $row["TITLE"];
+        echo "</div>";
         echo "\t";
+        echo "<div>";
         echo $row["CNUM"];
+        echo "</div>
         echo "\t";
+        echo "<div>";
         echo $row["DAYS"];
+        echo "</div>";
         echo "\t";
+        echo "<div>";
         echo $row["START"] . ' - ' . $row["END"];
+        echo "</div>";
         echo "<br>";
     }
 }
