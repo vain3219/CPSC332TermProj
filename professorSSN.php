@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-    Hello World!
-<?php
+    Hello World! you're ssn is: <?php echo $_POST["ssn"]; ?>
+<?php /*
 $SSN = $_POST["ssn"]
 $hostName = "localhost";
 $userName = "cs332t32";
@@ -30,7 +30,7 @@ else {
     echo "0 results";
 }
 
-$conn->close();
+$conn->close(); */
 ?>
 </body>
 </html>
