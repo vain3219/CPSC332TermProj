@@ -25,14 +25,14 @@ if($result->num_rows > 0) { ?>
     <thead>
         <tr>
             <th scope="col">Grade </th>
-            <th scope="col">Count </th>
+            <th scope="col">Count </th><br>
         </tr>
     </thead>
     <tbody>
     <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
-        <td><br> <?php echo $row["GRADE"]; ?> </td>
-        <td><?php echo "\t"; ?></td>
+        <td> <?php echo $row["GRADE"]; ?> </td>
+        <td><?php echo "\t\t\t"; ?></td>
         <td><?php echo $row["NumberOf"]; ?></td>
         <td><?php echo "<br>"; ?></td>
     <?php } ?>
