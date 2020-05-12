@@ -1,5 +1,6 @@
+
 <?php
-$SSN = $_POST['SSN']
+$SSN = $_POST['ssn']
 $hostName = "localhost";
 $userName = "cs332t32";
 $password = "00C6dein";
