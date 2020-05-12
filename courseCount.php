@@ -18,9 +18,8 @@ if($conn->connect_error) {
 $sql = "select e.GRADE, COUNT(GRADE) as 'NumberOf' from ENROLL e, COURSE c  where c.CNUM = '$CNUM' and e.SEC_ID = $SNUM group by GRADE";
 $result = $conn->query($sql);
 
-echo "Query: $sql";   
-echo "<br>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
-echo "<br><br><br>";      
+echo "Query: $sql";    
+echo "<br>";     
 
 if($result->num_rows > 0) { ?>
     <thead>
@@ -33,8 +32,8 @@ if($result->num_rows > 0) { ?>
     <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
         <td> <?php echo $row["GRADE"]; ?> </td>
-        <td><?php echo "\t\t\t"; ?></td>
-        <td><?php echo $row["NumberOf"]; ?></td>
+        <td><?php echo "\t"; ?></td>
+        <td><span style="margin-left: 4em"><?php echo $row["NumberOf"]; ?></span></td>
         <td><?php echo "<br>"; ?></td>
     <?php } ?>
     </tbody>
