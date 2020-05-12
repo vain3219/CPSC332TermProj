@@ -27,7 +27,7 @@ if($result->num_rows > 0) { ?>
     <thead>
         <tr>
             <th scope="col">Section Id</th>
-            <th scope="col">Grade</th>
+            <th scope="col">Grade</th><br>
         </tr>
     </thead>
     <tbody>
