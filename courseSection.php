@@ -33,7 +33,7 @@ if($result->num_rows > 0) {
         echo $row["DAYS"];
         echo "\t";
         echo $row["START"] . ' - ' . $row["END"];
-        echo "t";
+        echo "\t";
         echo $row["COUNT"];
         echo "<br>";
     }
