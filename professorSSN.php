@@ -25,6 +25,7 @@ if($result->num_rows > 0) {
         echo $row["CNUM"];
         echo $row["DAYS"];
         echo $row["START"] . ' - ' . $row["END"];
+        echo "<br>";
     }
 }
 else {
