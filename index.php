@@ -9,7 +9,7 @@ text-align:center;
 body {
  text-align:center;
  background-image: url("bikinibottom.jpg");
- background-color: #cccccc;
+ background-color: none;
 }
 
 </style>
