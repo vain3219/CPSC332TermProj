@@ -30,7 +30,7 @@ Enter Professors SSN:
 <br>
 <input type="text" name="ssn">
 <br>
-<input type="submit">
+<input type="submit" value="Submit">
 <br><br>
 
 </div>
