@@ -76,7 +76,7 @@ Enter Course Number:
 
 <br><br>
 
-<form action="query4.php" method="POST">
+<form action="courseCWID.php" method="POST">
 <div style="background-color:white;">
 <br>
 Query #4
