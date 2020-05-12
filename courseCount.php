@@ -21,8 +21,14 @@ $result = $conn->query($sql);
 echo "Query: $sql";    
 echo "<br>";     
 
-if($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) { ?>
+if($result->num_rows > 0) { ?>
+    <thead>
+        <tr>
+            <th scope="col">Grade </th>
+            <th scope="col">Count </th>
+        </tr>
+    </thead>
+    <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
         <td> <?php echo $row["GRADE"]; ?> </td>
         <td><?php echo "\t"; ?></td>
