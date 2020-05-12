@@ -1,4 +1,6 @@
-
+<!DOCTYPE html>
+<html>
+    
 <?php
 $SSN = $_POST['ssn']
 $hostName = "localhost";
@@ -31,3 +33,4 @@ else {
 
 $conn->close();
 ?>
+</html>
