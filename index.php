@@ -5,6 +5,9 @@
          h1 {
          text-align:center;
          }
+         h2 {
+         background-color: white;   
+         }
          body {
          text-align:center;
          background-image: url("bikinibottom.jpg");
@@ -23,9 +26,7 @@
    </head>
    <body>
       <h1>Welcome to the Bikini Bottom University Database</h1>
-      <div class="rect">
       <h2>Professor Queries:</h2>
-      </div>   
       <form action="professorSSN.php" method="POST">
          <div style="background-color:none;">
             <br>
@@ -61,9 +62,7 @@
             <br><br>
          </div>
       </form>
-      <div class="rect">
       <h2>Student Queries:</h2>
-      </div>   
       <form action="courseSection.php" method="POST">
          <div style="background-color:none;">
             <br>
