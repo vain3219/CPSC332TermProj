@@ -20,15 +20,17 @@ $result = $conn->query($sql);
 
 echo "Query: $sql";    
 echo "<br>";     
-    
+
 if($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo $row["GRADE"];
-        echo "\t";
-        echo $row["NumberOf"];
-        echo "<br>";
-    }
-}
+    while($row = $result->fetch_assoc()) { ?>
+    <tr>
+        <td> <?php echo $row["GRADE"]; ?> </td>
+        <td><?php echo "\t"; ?></td>
+        <td><?php echo $row["NumberOf"]; ?></td>
+        <td><?php echo "<br>"; ?></td>
+    <?php } ?>
+
+<?php }
 else {
     echo "0 results";
 }
