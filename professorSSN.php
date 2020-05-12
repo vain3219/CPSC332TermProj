@@ -24,15 +24,15 @@ echo "<br><br><br>";
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div>";
-        echo $row["TITLE"];
+        echo "Title: $row["TITLE"]";
         echo "</div>";
         
         echo "<div>";
-        echo $row["CNUM"];
+        echo "Course Number: $row["CNUM"]";
         echo "</div>";
         
         echo "<div>";
-        echo $row["DAYS"];
+        echo "Days: $row["DAYS"]";
         echo "</div>";
 
         echo "<div>";
