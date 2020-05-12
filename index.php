@@ -51,7 +51,7 @@ Enter Section Number:
 <br>
 <input type="text" name="snum">
 <br>
-<input type="submit">
+<input type="submit" value="Submit">
 <br><br>
 
 </div>
@@ -68,7 +68,7 @@ Enter Course Number:
 <br>
 <input type="text" name="cnum">
 <br>
-<input type="submit">
+<input type="submit" value="Submit">
 <br><br>
 
 </div>
@@ -85,7 +85,7 @@ Enter Campus ID:
 <br>
 <input type="text" name="CWID">
 <br>
-<input type="submit">
+<input type="submit" value="Submit">
 <br><br>
 
 </div>
