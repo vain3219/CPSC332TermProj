@@ -14,11 +14,11 @@ body {
 
 </style>
 
-<title>University Database</title>
+<title>Bikini Bottom University Database</title>
 </head>
 
 <body>
-<h1>Welcome to the University Database</h1>
+<h1>Welcome to the Bikini Bottom University Database</h1>
 
 <h2>Professor Queries:</h2>
 
