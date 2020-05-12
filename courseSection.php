@@ -17,7 +17,7 @@ if($conn->connect_error) {
 $sql = "select c.SEC_ID, c.DAYS, c.START, c.END, COUNT(e.CWID)
         from COURSE c
         join ENROLL e
-        on e.CNUM = c.CNUM and c.CNUM = $CNUM
+        on e.CNUM = c.CNUM and c.CNUM = '$CNUM'
         group by e.CNUM";
 $result = $conn->query($sql);
 
