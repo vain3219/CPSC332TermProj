@@ -14,7 +14,7 @@ if($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select CNUM, GRADE
+$sql = "select SEC_ID, GRADE
         from ENROLL
         where CWID = $CWID";
 $result = $conn->query($sql);
@@ -24,7 +24,7 @@ echo "<br>";
     
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo $row["CNUM"];
+        echo $row["SEC_ID"];
         echo "\t";
         echo $row["GRADE"];
         echo "<br>";
