@@ -14,7 +14,7 @@ if($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select s.SEC_ID, s.DAYS, s.START, s.END, COUNT(e.CWID), s.RM_NUM
+$sql = "select s.SEC_ID, s.DAYS, s.START, s.END, COUNT(e.CWID) as 'NumberOf', s.RM_NUM
         from SECTION s
         join ENROLL e
         on e.SEC_ID = s.SEC_ID and s.CNUM = '$CNUM'
@@ -44,7 +44,7 @@ if($result->num_rows > 0) {
         echo "</div>";
         
         echo "<div>";
-        echo "Count: " . $row["COUNT"];
+        echo "Count: " . $row["NumberOf"];
         echo "</div>";
         echo "<br>";
     }
