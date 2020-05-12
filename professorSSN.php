@@ -20,10 +20,10 @@ $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo $row["COURSE_TITLE"];
-        echo $row["CLASSROOM"];
-        echo $row["MEETING_DAYS"];
-        echo $row["BEGINNING_TIME"] . ' - ' . $row["ENDING_TIME"];
+        echo $row["TITLE"];
+        echo $row["CNUM"];
+        echo $row["DAYS"];
+        echo $row["START"] . ' - ' . $row["END"];
     }
 }
 else {
