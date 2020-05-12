@@ -25,18 +25,19 @@ if($result->num_rows > 0) {
         echo "<div>";
         echo $row["TITLE"];
         echo "</div>";
-        echo "\t";
+        
         echo "<div>";
         echo $row["CNUM"];
-        echo "</div>
-        echo "\t";
+        echo "</div>";
+        
         echo "<div>";
         echo $row["DAYS"];
         echo "</div>";
-        echo "\t";
+
         echo "<div>";
         echo $row["START"] . ' - ' . $row["END"];
         echo "</div>";
+        
         echo "<br>";
     }
 }
