@@ -6,7 +6,7 @@
          text-align:center;
          }
          h2 {
-         background-color: white;   
+         background-color: lightblue;   
          }
          body {
          text-align:center;
