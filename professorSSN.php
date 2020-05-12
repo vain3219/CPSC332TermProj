@@ -4,7 +4,7 @@
     Hello World! Your SSN Number is: <?php echo $_POST['ssn']; ?>
     <br><br>
 <?php 
-POST_SSN = $_POST["ssn"];
+$SSN = $_POST["ssn"];
 $hostName = "localhost";
 $userName = "cs332t32";
 $password = "ooC6dein";
@@ -16,7 +16,7 @@ if($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select c.TITLE, s.CNUM, s.DAYS, s.START, s.END from PROF p, COURSE c, SECTION s where p.SSN = POST_SSN and p.SSN = s.INSTRUCTOR and s.CNUM = c.CNUM;";
+$sql = "select c.TITLE, s.CNUM, s.DAYS, s.START, s.END from PROF p, COURSE c, SECTION s where p.SSN = $SSN and p.SSN = s.INSTRUCTOR and s.CNUM = c.CNUM;";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
