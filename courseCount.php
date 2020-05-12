@@ -33,7 +33,7 @@ if($result->num_rows > 0) { ?>
     <tr>
         <td> <?php echo $row["GRADE"]; ?> </td>
         <td><?php echo "\t"; ?></td>
-        <td><span style="margin-left: 4em"><?php echo $row["NumberOf"]; ?></span></td>
+        <td><span style="margin-left: 3em"><?php echo $row["NumberOf"]; ?></span></td>
         <td><?php echo "<br>"; ?></td>
     <?php } ?>
     </tbody>
