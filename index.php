@@ -25,49 +25,68 @@ border: 3px solid black;
 <body>
 <h1>Welcome to the University Database</h1>
 
-<?php
-function query1() {
-    $hostName = "localhost";
-    $userName = "cs332t32";
-    $password = "ooC6dein";
-    $dbName = $userName;
+<h2>Professor Queries:</h2>
 
-    if($conn->connect_error) {
-               die("Connection failed: " . $conn->connect_error);
-    }
+<form action="query1.php" method:"POST">
+<div style="background-color:white;">
+<br>
+Query #1
+<br>
+Enter Professors SSN:
+<br>
+<input type="text" name="ssn">
+<br><br>
 
-    $query = "select c.TITLE, s.CNUM, s.DAYS, s.START, s.END from PROF p, COURSE c, SECTION s where p.SSN = '274728374' and p.SSN = s.INSTRUCTOR and s.CNUM = c.CNUM;";
-    $result = $conn->query($query);
+</div>
+</form>
 
-    if($result->num_rows > 0) {
-        echo '<div class="rsltcont">';
-        echo '<div class="results">';
-        echo '<p>';
-               while($row = $result->fetch_assoc() ) {
-                       echo $row['TITLE'] . " " . $row['CNUM'] . " " . $row['DAYS'] . " " . $row['START'] . " " . $row['END'] . "<br>";
-               }
-        echo '</p>';
-        echo '</div>';
-        echo '</div>';
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
+<br><br>
 
-// display results on webpage
-}
-?>  
-<button type="button" onclick=query1()>Query #1</button>
-   <div class="results">
-   </div>
-<button type="button" onclick=query2()>Query #2</button>
-   <div class="results">
-   </div>
-<button type="button" onclick=query3() >Query #3</button>
-   <div class="results">
-   </div>
-<button type="button" onclick=query4()>Query #4</button>
-   <div class="results">
-   </div>
+<form action="query2.php" method:"POST">
+<div style="background-color:white;">
+<br>
+Query #2
+<br>
+Enter Course Number:
+<br>
+<input type="text" name="cnum">
+<br>
+Enter Section Number:
+<br>
+<input type="text" name="snum">
+<br><br>
+
+</div>
+</form>
+
+<h2>Student Queries:</h2>
+
+<form action="query3.php" method:"POST">
+<div style="background-color:white;">
+<br>
+Query #3
+<br>
+Enter Course Number:
+<br>
+<input type="text" name="cnum">
+<br><br>
+
+</div>
+</form>
+
+<br><br>
+
+<form action="query4.php" method:"POST">
+<div style="background-color:white;">
+<br>
+Query #4
+<br>
+Enter Campus ID:
+<br>
+<input type="text" name="CWID">
+<br><br>
+
+</div>
+</form>
 </body>
 </html>
