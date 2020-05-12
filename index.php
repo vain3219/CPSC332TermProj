@@ -17,7 +17,7 @@
          text-align:center;
          align:center;
          display:inline;
-         background-color: white;
+         background-color: lightblue;
          height: 100px;
          width: 175px;
          }
