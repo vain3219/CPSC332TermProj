@@ -19,6 +19,9 @@ $sql = "select CNUM, GRADE
         where CWID = $CWID";
 $result = $conn->query($sql);
 
+echo "Query: $sql";    
+<br>       
+    
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo $row["CNUM"];
