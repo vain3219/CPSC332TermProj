@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+    Hello World! Your SSN Number is <?php echo $_POST['ssn']; ?>
 <?php 
 $SSN = $_POST["ssn"];
 $hostName = "localhost";
