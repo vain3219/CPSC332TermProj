@@ -5,7 +5,7 @@
 $SSN = $_POST['ssn']
 $hostName = "localhost";
 $userName = "cs332t32";
-$password = "00C6dein";
+$password = "ooC6dein";
 $dbName = $userName;
 
 $conn = new mysqli($hostName, $userName, $password, $dbName);
