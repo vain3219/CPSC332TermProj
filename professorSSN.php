@@ -17,6 +17,9 @@ if($conn->connect_error) {
 $sql = "select c.TITLE, s.CNUM, s.DAYS, s.START, s.END from PROF p, COURSE c, SECTION s where p.SSN = $SSN and p.SSN = s.INSTRUCTOR and s.CNUM = c.CNUM;";
 $result = $conn->query($sql);
 
+echo "Query: $sql";    
+<br>       
+    
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo $row["TITLE"];
