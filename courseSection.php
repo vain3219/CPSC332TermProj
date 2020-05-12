@@ -26,15 +26,25 @@ echo "<br>";
     
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
+        echo "<div>";
         echo $row["SEC_ID"];
-        echo "\t";
+        echo "</div>";
+        
+        echo "<div>";
         echo $row["RM_NUM"];
-        echo "\t";
+        echo "</div>";
+        
+        echo "<div>";
         echo $row["DAYS"];
-        echo "\t";
+        echo "</div>";
+        
+        echo "<div>";
         echo $row["START"] . ' - ' . $row["END"];
-        echo "\t";
+        echo "</div>";
+        
+        echo "<div>";
         echo $row["COUNT"];
+        echo "</div>";
         echo "<br>";
     }
 }
