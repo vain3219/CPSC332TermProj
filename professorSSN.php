@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-    
+    Hello World!
 <?php
- echo "hello";
 $SSN = $_POST["ssn"]
 $hostName = "localhost";
 $userName = "cs332t32";
