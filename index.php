@@ -23,7 +23,7 @@ body {
 <h2>Professor Queries:</h2>
 
 <form action="professorSSN.php" method="POST">
-<div style="background-color:white;opacity: 0.75;">
+<div style="background-color:none;">
 <br>
 Query #1
 <br>
@@ -40,7 +40,7 @@ Enter Professors SSN:
 <br><br>
 
 <form action="courseCount.php" method="POST">
-<div style="background-color: none;opacity: 0.75;">
+<div style="background-color: none;">
 <br>
 Query #2
 <br>
@@ -61,7 +61,7 @@ Enter Section Number:
 <h2>Student Queries:</h2>
 
 <form action="courseSection.php" method="POST">
-<div style="background-color:white;opacity: 0.75;">
+<div style="background-color:none;">
 <br>
 Query #3
 <br>
@@ -78,7 +78,7 @@ Enter Course Number:
 <br><br>
 
 <form action="courseCWID.php" method="POST">
-<div style="background-color:white;opacity: 0.75;">
+<div style="background-color:none;">
 <br>
 Query #4
 <br>
