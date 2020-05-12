@@ -18,8 +18,9 @@ if($conn->connect_error) {
 $sql = "select e.GRADE, COUNT(GRADE) as 'NumberOf' from ENROLL e, COURSE c  where c.CNUM = '$CNUM' and e.SEC_ID = $SNUM group by GRADE";
 $result = $conn->query($sql);
 
-echo "Query: $sql";    
-echo "<br>";     
+echo "Query: $sql";   
+echo "<br>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+echo "<br><br><br>";      
 
 if($result->num_rows > 0) { ?>
     <thead>
