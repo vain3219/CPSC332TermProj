@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    Hello World! you're ssn is: <?php echo $_POST["ssn"]; ?>
+    Hello World! you're ssn is: <?php echo 'fuck you!'; ?>
 <?php /*
 $SSN = $_POST["ssn"]
 $hostName = "localhost";
